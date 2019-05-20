@@ -13,40 +13,46 @@
     "pages": [
       
       {
-        "id": "index",
-        "articleId": "123",
-        "lcd": "321",
+        "id": "Map",
+        "articleId": "510081151",
+        "lcd": "510082251",
         "default": true
       },
       
       {
-        "id": "page-124",
-        "articleId": "124",
-        "lcd": ""
+        "id": "Day 1",
+        "articleId": "510080122",
+        "lcd": "510082251"
       },
       
       {
-        "id": "page-125",
-        "articleId": "125",
-        "lcd": ""
+        "id": "Day 2",
+        "articleId": "510080482",
+        "lcd": "510082251"
       },
       
       {
-        "id": "page-126",
-        "articleId": "126",
-        "lcd": ""
+        "id": "Day 3",
+        "articleId": "510080592",
+        "lcd": "510082251"
       },
       
       {
-        "id": "page-127",
-        "articleId": "127",
-        "lcd": ""
+        "id": "Day 4",
+        "articleId": "510080662",
+        "lcd": "510082251"
       },
       
       {
-        "id": "page-128",
-        "articleId": "128",
-        "lcd": ""
+        "id": "Day 5",
+        "articleId": "510080742",
+        "lcd": "510082251"
+      },
+
+      {
+        "id": "Day 6",
+        "articleId": "510080822",
+        "lcd": "510082251"
       }
       
     ]

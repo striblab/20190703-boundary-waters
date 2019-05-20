@@ -2,6 +2,16 @@
 
 Five part series about a trip to the boundary waters for outdoors
 
+map: 510081151
+day1: 510080122
+day2: 510080482
+day3: 510080592
+day4: 510080662
+day5: 510080742
+day6: 510080822
+
+LCD: 510082251
+
 ## Data
 
 _<Describe data and where it comes from.>_
