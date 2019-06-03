@@ -1,0 +1,90 @@
+<link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+<style>
+#hero {
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+#content {
+  background-color: #130d0a;
+}
+
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+  position: fixed;
+  z-index: -1;
+}
+
+#hero,
+.layer {
+  min-height: 800px;
+}
+
+.layer-1 {
+  background-image: url("http://stmedia.startribune.com/images/layer1-labelled.png");
+}
+
+.layer-2 {
+  background-image: url("http://stmedia.startribune.com/images/layer2-labelled.png");
+}
+
+.layer-3 {
+  background-image: url("http://stmedia.startribune.com/images/layer3-labelled.png");
+}
+
+.layer-4 {
+  background-image: url("http://stmedia.startribune.com/images/layer4-labelled.png");
+}
+
+.layer-5 {
+  background-image: url("http://stmedia.startribune.com/images/layer5-labelled.png");
+}
+
+.layer-6 {
+  background-image: url("http://stmedia.startribune.com/images/layer6-labelled.png");
+}
+
+</style>
+<div id='hero' style='margin-bottom:350px;'>
+  <div class='layer-1 layer' data-depth='0.1' data-type='parallax'>
+    <div class="tooltop">tooltip goes here</div>
+  </div>
+  <div class='layer-2 layer' data-depth='0.2' data-type='parallax'></div>
+  <div class='layer-3 layer' data-depth='0.35' data-type='parallax'></div>
+  <div class='layer-4 layer' data-depth='.45' data-type='parallax'></div>
+  <div class='layer-5 layer' data-depth='.5' data-type='parallax'></div>
+  <div class='layer-6 layer' data-depth='.6' data-type='parallax'></div>
+</div>
+<script>
+(function() {
+
+  window.addEventListener('scroll', function(event) {
+    var depth, i, layer, layers, len, movement, topDistance, translate3d;
+
+    topDistance = this.pageYOffset;
+    console.log("topDistance " + topDistance);
+    layers = document.querySelectorAll("[data-type='parallax']");
+    for (i = 0, len = layers.length; i < len; i++) {
+      layer = layers[i];
+      depth = layer.getAttribute('data-depth');
+      movement = -(topDistance * depth);
+      translate3d = 'translate3d(' + (movement / 10) + 'px, ' + movement + 'px, ' + (movement * 10) + 'px)';
+      layer.style['-webkit-transform'] = translate3d;
+      layer.style['-moz-transform'] = translate3d;
+      layer.style['-ms-transform'] = translate3d;
+      layer.style['-o-transform'] = translate3d;
+      layer.style.transform = translate3d;
+      layer.style.filter = 'blur(' + ((i - 5) * (-topDistance / this.innerHeight)) + 'px)';
+
+
+    }
+  });
+
+}).call(this);
+
+</script>
