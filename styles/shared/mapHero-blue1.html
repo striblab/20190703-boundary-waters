@@ -1,0 +1,137 @@
+<link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+<style>
+#hero {
+  height: 663px;
+  overflow: hidden;
+  position: relative;
+  top: 100px;
+}
+
+#content {
+  background-color: #130d0a;
+}
+
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 663px;
+  position: fixed;
+  z-index: -1;
+}
+
+#hero,
+.layer {
+  min-height: 663px;
+}
+
+.layer-1 {
+  background-image: url("http://stmedia.startribune.com/images/layer1-blue.png");
+}
+
+.layer-1 img {
+  opacity: .9;
+}
+
+.layer-2 {
+  background-image: url("http://stmedia.startribune.com/images/layer2-blue.png");
+}
+
+.layer-2 img {
+  opacity: .8;
+}
+
+.layer-3 {
+  background-image: url("http://stmedia.startribune.com/images/layer3-blue.png");
+}
+
+.layer-3 img {
+  opacity: .6;
+}
+
+.layer-4 {
+  background-image: url("http://stmedia.startribune.com/images/layer4-blue.png");
+}
+
+.layer-4 img {
+  opacity: .4;
+}
+
+.layer-5 {
+  background-image: url("http://stmedia.startribune.com/images/layer5-blue.png");
+}
+
+.layer-5 img {
+  opacity: .3;
+}
+
+.layer-6 {
+  background-image: url("http://stmedia.startribune.com/images/layer6-blue.png");
+}
+
+.layer-6 img {
+  opacity: 0;
+}
+
+.layer img {
+
+}
+
+</style>
+<div id='hero' style='margin-bottom:350px;'>
+  <!--   <div class='layer-1 layer' data-depth='0.1' data-type='parallax'></div>
+  <div class='layer-2 layer' data-depth='0.2' data-type='parallax'></div>
+  <div class='layer-3 layer' data-depth='0.35' data-type='parallax'></div>
+  <div class='layer-4 layer' data-depth='.45' data-type='parallax'></div>
+  <div class='layer-5 layer' data-depth='.5' data-type='parallax'></div>
+  <div class='layer-6 layer' data-depth='.6' data-type='parallax'></div> -->
+  <div class='layer-1 layer' data-depth='0.0' data-type='parallax'><img src="http://stmedia.startribune.com/images/layer1-blue-b.png"></div>
+  <div class='layer-2 layer' data-depth='0.25' data-type='parallax'><img src="http://stmedia.startribune.com/images/layer2-blue-b.png"></div>
+  <div class='layer-3 layer' data-depth='0.5' data-type='parallax'><img src="http://stmedia.startribune.com/images/layer3-blue-b.png"></div>
+  <div class='layer-4 layer' data-depth='0.7' data-type='parallax'><img src="http://stmedia.startribune.com/images/layer4-blue-b.png"></div>
+  <div class='layer-5 layer' data-depth='0.75' data-type='parallax'><img src="http://stmedia.startribune.com/images/layer5-blue-b.png"></div>
+  <div class='layer-6 layer' data-depth='1' data-type='parallax'><img src="http://stmedia.startribune.com/images/layer6-blue-b.png"></div>
+</div>
+<div id="textGoesHere">test text </div>
+<!--  contrast = ((1 - depth) * 100);
+      brightness = ((1 - depth) * 100)+100; -->
+<script>
+(function() {
+
+  window.addEventListener('scroll', function(event) {
+    var depth, contrast, brightness, i, layer, layers, len, movement, topDistance, translate3d;
+
+    topDistance = this.pageYOffset;
+    if (topDistance > 290) { topDistance = 290 }
+    console.log('topDistance ' + topDistance);
+    layers = document.querySelectorAll("[data-type='parallax']");
+    console.log('LAYERS=' + layers);
+    for (i = 0, len = layers.length; i < len; i++) {
+      layer = layers[i];
+      depth = layer.getAttribute('data-depth');
+      contrast = 100;
+      brightness = 100;
+      movement = -(topDistance * depth);
+      translate3d = 'translate3d(' + (movement / 10) + 'px, ' + movement + 'px, ' + (movement * 10) + 'px)';
+      layer.style['-webkit-transform'] = translate3d;
+      layer.style['-moz-transform'] = translate3d;
+      layer.style['-ms-transform'] = translate3d;
+      layer.style['-o-transform'] = translate3d;
+      layer.style.transform = translate3d;
+      layer.style.filter = 'blur(' + ((i - 5) * (-topDistance / this.innerHeight)) + 'px) contrast(' + contrast + '%) brightness(' + brightness + '%)';
+
+      console.log('blah= ' + ((i - 5) * (-topDistance / this.innerHeight)) + '%)');
+      console.log('layer ' + i + ' depth=' + depth + ' contrast=' + contrast + ' brightness=' + brightness);
+    }
+  });
+
+}).call(this);
+
+$(document).ready(function() {
+  $('html, body').animate({
+    scrollTop: $('#textGoesHere').offset().top - 700
+  }, 'slow');
+});
+
+</script>

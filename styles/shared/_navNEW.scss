@@ -18,7 +18,7 @@
 }
 
 .series-article nav.story-nav .drop-zone ul.dropdown li {
-  padding: 11px 40px 10px 20px;
+  padding: 16px 40px 15px 20px;
   border: 1px solid #d3d3d3;
   border-top: none;
   position: relative;
@@ -296,7 +296,7 @@ span.dropcap {
   display: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 750px) {
   .strib-logo.color {
     opacity: 1 !important;
   }
@@ -348,53 +348,52 @@ span.dropcap {
 
 // JS RESETS for when the page loads/
 nav.story-nav {
-  background-color: rgba(255, 255, 255, 0);
-  border-bottom: 0px solid transparent;
-  transition: 1s both;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 0px solid transparent;
+    transition: 1s both;
 
 }
 
 // uniques situation for part 3, js addresses this as well
 body.story-510760212 nav.story-nav {
-  background: linear-gradient(to bottom, rgba(142, 156, 174, 0.55) 0%, rgba(142, 156, 174, 0.35) 60%, rgba(142, 156, 174, 0) 100%);
+    background: linear-gradient(to bottom, rgba(142, 156, 174, 0.55) 0%, rgba(142, 156, 174, 0.35) 60%, rgba(142, 156, 174, 0) 100%);
 
 }
 
 .strib-logo.white {
-  opacity: 1;
-  transition: 1s opacity;
+    opacity: 1;
+    transition: 1s opacity;
 }
 
 li.label {
-  color: #ffffff;
-  transition: 1s color;
+    color: #ffffff;
+    transition: 1s color;
 }
 
 .strib-logo.color {
-  opacity: 0;
-  transition: 1s opacity;
+    opacity: 0;
+    transition: 1s opacity;
 }
 
 ul.dropdown {
-  background: rgba(255, 255, 255, 0);
-  transition: 1s all;
+    background: rgba(255, 255, 255, 0);
+    transition: 1s all;
 
-  .label .projectTitle {
-    font-family: "Benton Sans";
-    font-size: 14px;
-    text-transform: none;
-    letter-spacing: 0;
-    margin-top: 1px;
-  }
+    .label .projectTitle {
+        font-family: "Benton Sans";
+        font-size: 14px;
+        text-transform: none;
+        letter-spacing: 0;
+    }
 }
 
 span.caret {
-  opacity: 0;
-  transition: 1s opacity;
+    opacity: 0;
+    transition: 1s opacity;
 }
 
 li.link {
-  display: none;
+    display: none;
 }
 
 
@@ -404,45 +403,46 @@ li.link {
 
 
 .series-article nav.story-nav .drop-zone ul.dropdown {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .series-article nav.story-nav .drop-zone ul.dropdown.links {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 .story-nav div.share-buttons-nav {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translate(0, -50%);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
 
-  @media only screen and (max-width: 640px) {
-    top: 0;
-    transform: translate(0, 0);
-  }
+    @media only screen and (max-width: 640px) {
+        top: 0;
+        transform: translate(0, 0);
+    }
 }
 
 .strib-logo.color {
-  opacity: 0;
+    opacity: 0;
 }
 
 .series-article nav.story-nav .drop-zone ul.dropdown li {
-  letter-spacing: .5px;
-  text-align: center;
+    letter-spacing: .5px;
+    text-align: center;
 }
 
 .series-article .section-label.section-label--tight {
-  display: none;
+    display: none;
 }
 
 span.dropcap {
-  font-size: 80px;
-  float: left;
-  font-family: "Whitman Display";
-  margin-bottom: 0;
-  margin-right: 10px;
-  line-height: 1;
-  font-weight: 400;
-  margin-top: -8px;
+    font-size: 80px;
+    float: left;
+    font-family: "Whitman Display";
+    margin-bottom: 0;
+    margin-right: 10px;
+    line-height: 1;
+    font-weight: 400;
+    margin-top: -8px;
 }
+
