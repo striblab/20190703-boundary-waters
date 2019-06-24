@@ -315,9 +315,7 @@ p.summary {
     line-height: 0.9em;
 
     @media only screen and (max-width: 767px) {
-      line-height: 1.4;
-      font-size: 22px;
-      width: 85%;
+      font-size: 3em;
     }
   }
 }
@@ -430,8 +428,9 @@ div.button-set {
     font-weight: 400;
     padding: .5em 0 0;
     margin: 0 0 .5em;
-     @media only screen and (max-width: 600px) {
-      font-size:2em;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 2em;
     }
   }
 

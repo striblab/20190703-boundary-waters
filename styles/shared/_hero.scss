@@ -1,7 +1,7 @@
 .hero {
   overflow: hidden;
   position: relative;
-  height: 80vh;
+  height: 100vh;
   margin-bottom: 2.5em;
   margin-top: 0;
   background-position: top left;
@@ -28,11 +28,18 @@
     opacity: 0;
     -webkit-animation: introFade 3s 2s ease-out forwards;
     animation: introFade 3s 2s ease-out forwards;
-  }
 
+    @media only screen and (max-width: 767px) {
+      height: 100%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 0px;
+    height: 80vh;
+  }
   @media only screen and (max-width: 767px) {
     margin-bottom: 0px;
-    min-height: 100vh;
+    height: 60vh;
   }
 
   div.background-image {

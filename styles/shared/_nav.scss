@@ -59,7 +59,7 @@
   position: absolute;
   z-index: 10;
   right: 12px;
-  top: 22px;
+  top: 18px;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%)
 }
@@ -223,6 +223,8 @@ li.link {
   display: none;
 }
 
+.drop-zone span.label-part-title {display:none;}
+.drop-zone .projectTitle {display:none;}
 
 .package-share .share__facebook .share-icon,
 .package-share .share__twitter .share-icon,
@@ -267,26 +269,53 @@ span.dropcap {
   margin-top: -8px;
 }
 
+// .story-510080122 li.label-510080122,
+// .story-510080482 li.label-510080482,
+// .story-3 li.label-3,
+// .story-4 li.label-4,
+// .story-5 li.label-5,
+// .story-6 li.label-6,
+// .story-510081151 li.label-510081151 {
+//   //map
+//   display: block !important;
+// }
+
+// .story-510080122 li.link-510080122,
+// .story-510080482 li.link-510080482,
+// .story-3 li.link-3,
+// .story-4 li.link-4,
+// .story-5 li.link-5,
+// .story-6 li.link-6,
+// .story-510081151 li.link-510081151 {
+//   //map
+//   display: none !important;
+// }
+
+
+// Shows that days story label
 .story-510080122 li.label-510080122,
 .story-510080482 li.label-510080482,
-.story-3 li.label-3,
-.story-4 li.label-4,
-.story-5 li.label-5,
-.story-6 li.label-6,
+.story-510080592 li.label-510080592,
+.story-510080662 li.label-510080662,
+.story-510080742 li.label-510080742,
+.story-510080822 li.label-510080822,
 .story-510081151 li.label-510081151 {
   //map
   display: block !important;
 }
 
+
+// for that days current label
 .story-510080122 li.link-510080122,
 .story-510080482 li.link-510080482,
-.story-3 li.link-3,
-.story-4 li.link-4,
-.story-5 li.link-5,
-.story-6 li.link-6,
+.story-510080592 li.link-510080592,
+.story-510080662 li.link-510080662,
+.story-510080742 li.link-510080742,
+.story-510080822 li.link-510080822,
 .story-510081151 li.link-510081151 {
   //map
-  display: none !important;
+  display: block !important;
+  color:red;
 }
 
 
