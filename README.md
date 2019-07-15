@@ -3,12 +3,26 @@
 Five part series about a trip to the boundary waters for outdoors
 
 map: 510081151
+
 day1: 510080122
+sidebar: 512742652
+
 day2: 510080482
+sidebar: 512743502
+
 day3: 510080592
+sidebar: 512743082
+
 day4: 510080662
+sidebar: 512743202
+
 day5: 510080742
-day6: 510080822
+sidebar: 512743412
+
+
+
+emergency: 510080822
+
 
 LCD: 510082251
 

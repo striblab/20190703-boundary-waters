@@ -1,0 +1,60 @@
+<div class="strib-styles ssa ssb ssc">
+  <section class="hero" id="hero">
+    <button class="go"><b>WATCH VIDEO </b>| 3:19</button>
+    <div class="topNavBar">
+      <a href="http://www.startribune.com">
+        <div class="strib"></div>
+      </a>
+      <div class="sponsor">
+      </div>
+    </div>
+    <div class="title-card">
+      <a href="/485943941"><h1>Feeling Superior</h1></a>
+    </div>
+    <video autoplay="autoplay" muted loop="loop" id="heroVideo">
+      <source src="http://static.startribune.com/video/HERO-preview1.mp4" type="video/mp4">
+    </video>
+    <div class="myWrapper">
+      <iframe src="http://www.startribune.com/video/embed/486599311/?load_location=Article&amp;article_title=Activists%20vow%20resistance%20against%20Enbridge%20pipeline%20project&amp;article_author=Nicole%20Norfleet&amp;embed_site=http%3A%2F%2Fvm-video.startribune.com&amp;page_level=Article&amp;auto_start=0&amp;section_name=Local&amp;secs=Local&amp;soft_load=0&amp;article_id=486879381&amp;enable_postroll=1&amp&amp;stretch=fill&amp;no_ad=true&amp;no_watermark=true&amp;width=100vw&amp;height=100vh" id="articleVideo" name="stribVideoEmbed" class="heroVideo tease-video article-media__video" scrolling="no" horizontalscrolling="no" allowTransparency="true" verticalscrolling="no" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0" wmode="transparent">
+      </iframe>
+    </div>
+  </section>
+  <section id="mobile-hero" class="mobile-hero mobile">
+    <div class="topNavBar">
+      <a href="http://www.startribune.com">
+        <div class="strib"></div>
+      </a>
+      <div class="sponsor">
+      </div>
+    </div>
+    <div class="title-card">
+      <a href="/485943941"><h1>Feeling Superior</h1></a>
+    </div>
+  </section>
+</div>
+<script>
+var figure = $(".tease").hover(hoverVideo, hideVideo);
+
+function hoverVideo(e) {
+  $('video', this).get(0).play();
+}
+
+function hideVideo(e) {
+  $('video', this).get(0).pause();
+}
+
+$(document).ready(function() {
+  console.log("page ready");
+  var o = $("#heroVideo"),
+    e = $("button.go");
+  e.removeClass("video-loaded");
+  var n = $(".heroVideo")[0],
+    m = $(".myWrapper"),
+    d = n.contentWindow,
+    t = !1,
+    l = setInterval(function() {!t && n.contentWindow && n.contentWindow.loadStribVideoPlayer && (d = n.contentWindow, n.contentWindow.loadStribVideoPlayer(), t = !0, n.contentWindow.jwplayer().on("ready", a)) }, 250);
+
+  function a() { console.log("video loaded"), clearTimeout(l), e.addClass("video-loaded") } e.click(function() { console.log("button pressed"), console.log(t), t && (o.fadeOut("slow"), e.fadeOut("slow"), m.fadeIn("slow"), d.jwplayer().play()) })
+});
+
+</script>

@@ -1,0 +1,246 @@
+/**
+ * Project specific styling.
+ */
+
+.bios {
+  margin-top: 6em; // border-bottom: 1px solid #222;
+  // padding-bottom: 4em;
+  .bio {
+
+    display: table;
+    margin: 2em 0;
+    p {
+      max-width: 100%;
+    }
+    img {
+      float: right;
+      padding-left: 2em;
+      @media (max-width: 767px) {
+        float: none;
+        padding-left: 0;
+      }
+    }
+    h2 {
+      padding-top: 0;
+      font-style: italic;
+      @media (max-width: 767px) {
+        font-size:2.1em;
+        margin: .5em 0 .26em 0;
+      }
+    }
+  }
+}
+
+.teases {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  &.multimedia {
+    max-width: 970px;
+    border-bottom: 1px solid #444;
+    &.video {
+      margin: 4em 0;
+      @media (max-width: 767px) {
+        .tease {
+          iframe.article-media__video {
+            width: 300px!important;
+            height: 169px!important;
+          }
+        }
+      }
+    }
+    &.vr {
+      margin: 4em 0;
+    }
+    &.galleries {
+      margin: 4em 0;
+      border-bottom: 0px;
+      @media (max-width: 767px) {
+
+        margin: 1em 0;
+
+        figcaption {
+          color: #444!important;
+          background-color: #fff!important;
+          padding-left:0;
+        }
+      }
+    }
+    .tease {
+      width: 300px;
+      .tease-photo-author {
+        font-size: 10px;
+        color: #999;
+        letter-spacing: 1px;
+      }
+      &.vr .tease-photo-author {
+        padding-top: 6px;
+        letter-spacing: 1px;
+      }
+      figcaption {
+        color: #444;
+        &.note {
+          font-size: .8em;
+          color: #999;
+          a {
+            color: #666;
+          }
+        }
+      }
+    }
+    .related-media {
+      width: 100%;
+      float: none;
+      margin: .5em 0;
+    }
+    .article-featured-gallery-mod.overline {
+      .stack-label {
+        display: none;
+      }
+      position: relative;
+      right: auto;
+      width: 100%;
+    }
+  }
+
+  &.ads {
+    max-width: 970px;
+    width: 970px;
+    margin: 4em 0 2em -83px;
+    article.tease {
+      width: 300px;
+      margin: .5em auto;
+    }
+    @media (max-width: 767px) {
+      width:100%;
+      h4 {
+        // display: none;
+      }
+    }
+  }
+
+  h4 {
+    border-top: 1px #333 solid;
+    width: 100%;
+    max-width: 800px;
+    margin: 2em auto 1em auto;
+    padding: 3em 0;
+    text-align: center;
+  }
+
+  article.tease {
+    display: table;
+    width: 250px;
+    height: auto;
+    margin-top: 0;
+    @media (max-width: 767px) {
+      width:300px;
+      background-size: contain;
+      margin: 1em auto;
+    }
+    &.isDisabled {
+
+      h1,
+      .tease-summary {
+        color: #ccc;
+      }
+      .tease-photo {
+        display: inherit;
+        opacity: .3;
+        .tease-photo-img {
+          visibility: hidden;
+        }
+      }
+    }
+    &:before {
+      display: none;
+    }
+
+    header {
+      font-weight: normal;
+      font-size: .82em;
+      color: #000000;
+      margin: .25em 0 .25em 0;
+      text-align: left;
+    }
+    .tease-timestamp {
+      display: none;
+    }
+    .tease-photo {
+      width: 250px;
+      float: none;
+      margin: 0 0 .5em 0;
+      height: 141px;
+       @media (max-width: 767px) {
+        width:300px;
+        height:170px;
+      }
+
+      &.one {
+        background-image: url('http://stmedia.startribune.com/images/THUMB-water.png');
+      }
+      &.two {
+        background-image: url('http://stmedia.startribune.com/images/THUMB-boom.png');
+      }
+      &.three {
+        background-image: url('http://stmedia.startribune.com/images/THUMB-people.png');
+      }
+      &.four {
+        background-image: url('http://stmedia.startribune.com/images/THUMB-suffer.png');
+      }
+      &.five {
+        background-image: url('http://stmedia.startribune.com/images/THUMB-nature.png');
+      }
+      &.six {
+        background-image: url('http://stmedia.startribune.com/images/THUMB-protect.png');
+      }
+      .tease-photo-img {
+        padding: 0;
+        width: inherit;
+        height: inherit;
+      }
+    }
+    video::-webkit-media-controls {
+      display: none !important;
+    }
+    video {
+      width: 100%;
+    }
+
+    a {
+      color: #000000;
+      transition: color 500ms;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #39563b;
+      transition: color 500ms;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #000000;
+      transition: color 500ms;
+      text-decoration: none;
+    }
+
+
+
+    h1 {
+      text-align: left;
+      font-family: "Popular";
+      font-weight: bold;
+      font-size: 1.18em;
+      line-height: 1.15em;
+      padding-bottom: .2em;
+      margin-bottom: 0;
+    }
+    .tease-summary {
+      font-size: .875em;
+      line-height: 1.2143em;
+      text-align: left;
+    }
+  }
+}

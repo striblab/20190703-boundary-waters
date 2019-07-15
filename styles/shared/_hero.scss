@@ -1,4 +1,83 @@
+// PROLOGUE
+button.go {
+  position: absolute;
+  bottom: 4em;
+  left: 2em;
+  display: block;
+  z-index: 100;
+  font-size: .9em;
+  border: 1px;
+  background-color: rgba(51, 51, 51, 0.5);
+  line-height: 1em;
+  margin: 0;
+  padding: .5em 1em;
+  color: #fff;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  cursor: pointer;
+  border-radius: .33333em;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+
+  &:hover {
+    background-color: rgba(51, 51, 51, 1);
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+
+// .myWrapper {
+//   position: relative;
+//   // padding-bottom: 54%;
+//   min-height: 100%;
+//   z-index: 5;
+//   opacity: 0;
+//   animation: introFade 3s 5s ease-out forwards;
+
+//   @media (max-width: 767px) {
+//     display: none;
+//   }
+// }
+
+// .myWrapper iframe {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   -webkit-transform: translateX(-50%) translateY(-50%);
+//   transform: translateX(-50%) translateY(-50%);
+//   min-width: 100%;
+//   min-height: 100%;
+//   width: auto;
+//   height: auto;
+// }
+
+
+
+// END OF PROLOGUE SPECIFIC
+
+.series-article .hero-override .article-subhead {
+  margin: 0 auto .5em auto;
+  max-width: 750px;
+  padding: .3em 0 1em 0;
+}
+
 .hero {
+  font-size:17px;
   overflow: hidden;
   position: relative;
   height: 100vh;
@@ -29,18 +108,18 @@
     -webkit-animation: introFade 3s 2s ease-out forwards;
     animation: introFade 3s 2s ease-out forwards;
 
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 0px;
+      height: 80vh;
+    }
+
     @media only screen and (max-width: 767px) {
-      height: 100%;
+      margin-bottom: 0px;
+      height: 60vh;
     }
   }
-  @media only screen and (max-width: 768px) {
-    margin-bottom: 0px;
-    height: 80vh;
-  }
-  @media only screen and (max-width: 767px) {
-    margin-bottom: 0px;
-    height: 60vh;
-  }
+
+
 
   div.background-image {
     background: url(http://stmedia.stimg.co/08_1008169750_12PROVE021719_53468650.JPG?w=2000);
@@ -87,6 +166,37 @@
         font-size: 40px;
         letter-spacing: 1px;
       }
+    }
+  }
+}
+
+// DAY 1
+.story-510080482 {
+  .hero.day1 #heroVideo {
+    top: unset;
+    bottom: 0;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .subhead-module {
+    h1 {
+      width: 450px;
+      margin: .7em auto .3em auto;
+    }
+  }
+}
+
+// DAY 2
+.story-510080592 {
+  .hero.day2 #heroVideo {
+    top: 0;
+    transform: translateX(-50%) translateY(0%);
+  }
+
+  .subhead-module {
+    h1 {
+      width: 350px;
+      margin: .7em auto .3em auto;
     }
   }
 }

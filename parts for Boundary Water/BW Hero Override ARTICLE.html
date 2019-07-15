@@ -1,95 +1,155 @@
- <!-- ONE -->
+<!-- PROLOGUE -->
 
-  <section class="hero day1" id="hero">
-   <video autoplay="autoplay" muted loop="loop" id="heroVideo">
-      <source src="http://static.startribune.com/video/Hero_BWCA-Day_1.mp4" type="video/mp4"> </video>
-  </section>
-  <section id="mobile-hero" class="mobile-hero mobile">
-   
-  </section>
 
- <!-- <p class="hero-caption">Caption for hero image goes here.</p> -->
 
+<section class="hero day0" id="hero">
+
+   <button class="go"><b>WATCH VIDEO </b>| 3:19</button>
+
+    <video autoplay="autoplay" muted loop="loop" id="heroVideo">
+      <source src="http://static.startribune.com/video/HERO-preview1.mp4" type="video/mp4">
+    </video>
+    <div class="myWrapper">
+      <iframe src="http://www.startribune.com/video/embed/486599311/?load_location=Article&amp;article_title=Activists%20vow%20resistance%20against%20Enbridge%20pipeline%20project&amp;article_author=Nicole%20Norfleet&amp;embed_site=http%3A%2F%2Fvm-video.startribune.com&amp;page_level=Article&amp;auto_start=0&amp;section_name=Local&amp;secs=Local&amp;soft_load=0&amp;article_id=486879381&amp;enable_postroll=1&amp&amp;stretch=fill&amp;no_ad=true&amp;no_watermark=true&amp;width=100vw&amp;height=100vh" id="articleVideo" name="stribVideoEmbed" class="heroVideo tease-video article-media__video" scrolling="no" horizontalscrolling="no" allowTransparency="true" verticalscrolling="no" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0" wmode="transparent">
+      </iframe>
+    </div>
+</section>
+
+
+<section id="mobile-hero" class="mobile-hero mobile">
+</section>
+<!-- <p class="hero-caption">Caption for hero image goes here.</p> -->
 <div class="subhead-module">
-	<h1>Discomfort</h1>
-	<p class="byline">First in a six-part series by <b><a href="" target="_blank">Tony Jones</a></b> &mdash; Special&nbsp;to&nbsp;the&nbsp;Star&nbsp;Tribune  •&nbsp;&nbsp;Photos/video by <b><a href="http://www.startribune.com/aaron-lavinsky/281196821/" target="_blank">Aaron&nbsp;Lavinsky</a></b><br><span class="pub-date">July 12, 2019</span></p>
+  <h1>Prologue</h1>
+
+  <p class="byline">Preview of a five-part series by <b><a href="" target="_blank">Tony Jones</a></b> &mdash; Special&nbsp;to&nbsp;the&nbsp;Star&nbsp;Tribune<br>Photos/video by <b><a href="http://www.startribune.com/aaron-lavinsky/281196821/" target="_blank">Aaron&nbsp;Lavinsky</a></b><br><span class="pub-date">July 12, 2019</span></p>
 </div>
 
+<script>
+var figure = $(".tease").hover(hoverVideo, hideVideo);
 
+function hoverVideo(e) {
+  $('video', this).get(0).play();
+}
+
+function hideVideo(e) {
+  $('video', this).get(0).pause();
+}
+
+$(document).ready(function() {
+  console.log("page ready");
+  var o = $("#heroVideo"),
+    e = $("button.go");
+  e.removeClass("video-loaded");
+  var n = $(".heroVideo")[0],
+    m = $(".myWrapper"),
+    d = n.contentWindow,
+    t = !1,
+    l = setInterval(function() {!t && n.contentWindow && n.contentWindow.loadStribVideoPlayer && (d = n.contentWindow, n.contentWindow.loadStribVideoPlayer(), t = !0, n.contentWindow.jwplayer().on("ready", a)) }, 250);
+
+  function a() { console.log("video loaded"), clearTimeout(l), e.addClass("video-loaded") } e.click(function() { console.log("button pressed"), console.log(t), t && (o.fadeOut("slow"), e.fadeOut("slow"), m.fadeIn("slow"), d.jwplayer().play()) })
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ONE -->
+<section class="hero day1" id="hero">
+  <video autoplay="autoplay" muted loop="loop" id="heroVideo">
+    <!--  <source src="http://static.startribune.com/video/Hero_BWCA-Day_1.mp4" type="video/mp4">  -->
+    <source src="http://static.startribune.com/video/BWCA_DAY1_HERO_Single.mp4" type="video/mp4">
+  </video>
+</section>
+<section id="mobile-hero" class="mobile-hero mobile">
+</section>
+<!-- <p class="hero-caption">Caption for hero image goes here.</p> -->
+<div class="subhead-module">
+  <h1>A wild ride of water and woods</h1>
+  <!--   <div class="article-subhead">This is the place where a two-line subhead will be displayed to add some flavor and context to the one-word headline.</div> -->
+  <p class="byline">First in a five-part series by <b><a href="" target="_blank">Tony Jones</a></b> &mdash; Special&nbsp;to&nbsp;the&nbsp;Star&nbsp;Tribune<br>Photos/video by <b><a href="http://www.startribune.com/aaron-lavinsky/281196821/" target="_blank">Aaron&nbsp;Lavinsky</a></b><br><span class="pub-date">July 19, 2019</span></p>
+</div>
 
 
 <!-- TWO -->
-
-  <section class="hero day2" id="hero">
-   <video autoplay="autoplay" muted loop="loop" id="heroVideo">
-      <source src="http://static.startribune.com/video/Hero_BWCA-Day_2.mp4" type="video/mp4"> </video>
-  </section>
-  <section id="mobile-hero" class="mobile-hero mobile">
-   
-  </section>
-
- <!-- <p class="hero-caption">Caption for hero image goes here.</p> -->
-
+<section class="hero day2" id="hero">
+  <video autoplay="autoplay" muted loop="loop" id="heroVideo">
+    <!-- <source src="http://static.startribune.com/video/Hero_BWCA-Day_2.mp4" type="video/mp4">  -->
+    <source src="http://static.startribune.com/video/BWCA_DAY2_HERO_2.mp4" type="video/mp4">
+  </video>
+</section>
+<section id="mobile-hero" class="mobile-hero mobile">
+</section>
+<!-- <p class="hero-caption">Caption for hero image goes here.</p> -->
 <div class="subhead-module">
-	<h1>Disappointment</h1>
-	<p class="byline">Second in a six-part series by <b><a href="" target="_blank">Tony Jones</a></b> &mdash; Special&nbsp;to&nbsp;the&nbsp;Star&nbsp;Tribune  •&nbsp;&nbsp;Photos/video by <b><a href="http://www.startribune.com/aaron-lavinsky/281196821/" target="_blank">Aaron&nbsp;Lavinsky</a></b><br><span class="pub-date">July 19, 2019</span></p>
+  <h1>Making do on the fly</h1>
+  <!--  <div class="article-subhead">This is the place where a two-line subhead will be displayed to add some flavor and context to the one-word headline.</div> -->
+  <p class="byline">Second in a five-part series by <b><a href="" target="_blank">Tony Jones</a></b> &mdash; Special&nbsp;to&nbsp;the&nbsp;Star&nbsp;Tribune •&nbsp;&nbsp;Photos/video by <b><a href="http://www.startribune.com/aaron-lavinsky/281196821/" target="_blank">Aaron&nbsp;Lavinsky</a></b><br><span class="pub-date">July 26, 2019</span></p>
 </div>
-
-
-
-
 
 
 <!-- THREE -->
-
-  <section class="hero day3" id="hero">
-   <video autoplay="autoplay" muted loop="loop" id="heroVideo">
-      <source src="http://static.startribune.com/video/Hero_BWCA-Day_3.mp4" type="video/mp4"> </video>
-  </section>
-  <section id="mobile-hero" class="mobile-hero mobile">
-   
-  </section>
-
- <!-- <p class="hero-caption">Caption for hero image goes here.</p> -->
-
+<section class="hero day3" id="hero">
+  <video autoplay="autoplay" muted loop="loop" id="heroVideo">
+    <source src="http://static.startribune.com/video/BWCA_DAY3_HERO_Single.mp4" type="video/mp4"> </video>
+</section>
+<section id="mobile-hero" class="mobile-hero mobile">
+</section>
+<!-- <p class="hero-caption">Caption for hero image goes here.</p> -->
 <div class="subhead-module">
-	<h1>Steadfast</h1>
-	<p class="byline">Third in a six-part series by <b><a href="" target="_blank">Tony Jones</a></b> &mdash; Special&nbsp;to&nbsp;the&nbsp;Star&nbsp;Tribune  •&nbsp;&nbsp;Photos/video by <b><a href="http://www.startribune.com/aaron-lavinsky/281196821/" target="_blank">Aaron&nbsp;Lavinsky</a></b><br><span class="pub-date">July 26, 2019</span></p>
+  <h1>Digging deep</h1>
+  <!--  <div class="article-subhead">This is the place where a two-line subhead will be displayed to add some flavor and context to the one-word headline.</div> -->
+  <p class="byline">Third in a five-part series by <b><a href="" target="_blank">Tony Jones</a></b> &mdash; Special&nbsp;to&nbsp;the&nbsp;Star&nbsp;Tribune •&nbsp;&nbsp;Photos/video by <b><a href="http://www.startribune.com/aaron-lavinsky/281196821/" target="_blank">Aaron&nbsp;Lavinsky</a></b><br><span class="pub-date">August 2, 2019</span></p>
 </div>
-
-
 
 
 <!-- FOUR -->
-  <section class="hero day4" id="hero">
-   <video autoplay="autoplay" muted loop="loop" id="heroVideo">
-      <source src="http://static.startribune.com/video/Hero_BWCA-Day_4.mp4" type="video/mp4"> </video>
-  </section>
-  <section id="mobile-hero" class="mobile-hero mobile">
-   
-  </section>
-
- <!-- <p class="hero-caption">Caption for hero image goes here.</p> -->
-
+<section class="hero day4" id="hero">
+  <video autoplay="autoplay" muted loop="loop" id="heroVideo">
+    <source src="http://static.startribune.com/video/BWCA_DAY4_HERO_Single.mp4" type="video/mp4"> </video>
+</section>
+<section id="mobile-hero" class="mobile-hero mobile">
+</section>
+<!-- <p class="hero-caption">Caption for hero image goes here.</p> -->
 <div class="subhead-module">
-	<h1>Risk</h1>
-	<p class="byline">Fourth in a six-part series by <b><a href="" target="_blank">Tony Jones</a></b> &mdash; Special&nbsp;to&nbsp;the&nbsp;Star&nbsp;Tribune  •&nbsp;&nbsp;Photos/video by <b><a href="http://www.startribune.com/aaron-lavinsky/281196821/" target="_blank">Aaron&nbsp;Lavinsky</a></b><br><span class="pub-date">August 2, 2019</span></p>
+  <h1>Risk and reward</h1>
+  <div class="article-subhead">This is the place where a two-line subhead will be displayed to add some flavor and context to the one-word headline.</div>
+  <p class="byline">Fourth in a five-part series by <b><a href="" target="_blank">Tony Jones</a></b> &mdash; Special&nbsp;to&nbsp;the&nbsp;Star&nbsp;Tribune •&nbsp;&nbsp;Photos/video by <b><a href="http://www.startribune.com/aaron-lavinsky/281196821/" target="_blank">Aaron&nbsp;Lavinsky</a></b><br><span class="pub-date">August 9, 2019</span></p>
 </div>
 
 
-
 <!-- FIVE -->
-  <section class="hero day5" id="hero">
-   <video autoplay="autoplay" muted loop="loop" id="heroVideo">
-      <source src="http://static.startribune.com/video/Hero_BWCA-Day_5.mp4" type="video/mp4"> </video>
-  </section>
-  <section id="mobile-hero" class="mobile-hero mobile">
-   
-  </section>
-
- <!-- <p class="hero-caption">Caption for hero image goes here.</p> -->
-
+<section class="hero day5" id="hero">
+  <video autoplay="autoplay" muted loop="loop" id="heroVideo">
+    <source src="http://static.startribune.com/video/BWCA_DAY5_HERO_2.mp4" type="video/mp4"> </video>
+</section>
+<section id="mobile-hero" class="mobile-hero mobile">
+</section>
+<!-- <p class="hero-caption">Caption for hero image goes here.</p> -->
 <div class="subhead-module">
-	<h1>Legacy</h1>
-	<p class="byline">Fifth in a six-part series by <b><a href="" target="_blank">Tony Jones</a></b> &mdash; Special&nbsp;to&nbsp;the&nbsp;Star&nbsp;Tribune  •&nbsp;&nbsp;Photos/video by <b><a href="http://www.startribune.com/aaron-lavinsky/281196821/" target="_blank">Aaron&nbsp;Lavinsky</a></b><br><span class="pub-date">August 9, 2019</span></p>
+  <h1>Lasting legacy</h1>
+  <div class="article-subhead">This is the place where a two-line subhead will be displayed to add some flavor and context to the one-word headline.</div>
+  <p class="byline">Fifth in a five-part series by <b><a href="" target="_blank">Tony Jones</a></b> &mdash; Special&nbsp;to&nbsp;the&nbsp;Star&nbsp;Tribune •&nbsp;&nbsp;Photos/video by <b><a href="http://www.startribune.com/aaron-lavinsky/281196821/" target="_blank">Aaron&nbsp;Lavinsky</a></b><br><span class="pub-date">August 16, 2019</span></p>
 </div>

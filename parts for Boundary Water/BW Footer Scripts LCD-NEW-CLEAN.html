@@ -1,0 +1,252 @@
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+
+  var thisHost = document.location.hostname;
+  var storyNavHeight = document.getElementById('story-nav').offsetHeight;
+  if (thisHost == 'm.startribune.com' || thisHost == 'vm-m.startribune.com') { var elem = document.querySelector('.site-container'); } else { var elem = document.querySelector('.page-article'); } elem.style.paddingTop = 0 + 'px';
+});
+
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+  console.log('hey, Im here');
+
+  var controller = new ScrollMagic.Controller({
+    addIndicators: false
+
+  });
+
+
+  var heroScene = new ScrollMagic.Scene({
+      triggerElement: '#hero_Scene',
+      triggerHook: 0,
+      duration: '200%'
+
+    })
+    .setPin('#hero_Scene', { pushFollowers: false })
+
+
+    .addTo(controller);
+
+
+  var titleScene = new ScrollMagic.Scene({
+      triggerElement: '#title_Scene',
+      triggerHook: .9,
+      duration: 0
+
+    })
+
+
+    .addTo(controller);
+
+
+
+  var videoScene = new ScrollMagic.Scene({
+      triggerElement: '#video_Scene',
+      triggerHook: 0,
+      duration: '100%'
+    })
+    .setPin('#map0_Scene .pin-wrapper')
+
+    .addTo(controller);
+
+
+
+  var pinScene00 = new ScrollMagic.Scene({
+      triggerElement: '#map0_Scene',
+      triggerHook: 0,
+      duration: '100%'
+    })
+    .setPin('#map0_Scene .pin-wrapper')
+
+    .addTo(controller);
+
+
+
+  var pinScene01 = new ScrollMagic.Scene({
+      triggerElement: '#map0_Scene',
+      triggerHook: 0,
+      duration: '200%'
+    })
+    .setPin('#map1_Scene_a .pin-wrapper')
+
+    .addTo(controller);
+
+
+
+
+
+
+  var pinScene02a = new ScrollMagic.Scene({
+      triggerElement: '#map1_Scene_a',
+      triggerHook: 0,
+      duration: '200%'
+    })
+    .setPin('#map1_Scene_b .pin-wrapper')
+
+    .addTo(controller);
+
+
+
+  var pinScene02b = new ScrollMagic.Scene({
+      triggerElement: '#map1_Scene_b',
+      triggerHook: 0,
+      duration: '200%'
+    })
+    .setPin('#map2_Scene_a .pin-wrapper')
+
+    .addTo(controller);
+
+
+
+
+  var pinScene03a = new ScrollMagic.Scene({
+      triggerElement: '#map2_Scene_a',
+      triggerHook: 0,
+      duration: '200%'
+    })
+    .setPin('#map2_Scene_b .pin-wrapper')
+
+    .addTo(controller);
+
+
+
+  var pinScene03b = new ScrollMagic.Scene({
+      triggerElement: '#map2_Scene_b',
+      triggerHook: 0,
+      duration: '200%'
+    })
+    .setPin('#map3_Scene_a .pin-wrapper')
+
+    .addTo(controller);
+
+
+
+  var pinScene04a = new ScrollMagic.Scene({
+      triggerElement: '#map3_Scene_a',
+      triggerHook: 0,
+      duration: '200%'
+    })
+    .setPin('#map3_Scene_b .pin-wrapper')
+
+    .addTo(controller);
+
+
+
+  var pinScene04b = new ScrollMagic.Scene({
+      triggerElement: '#map3_Scene_b',
+      triggerHook: 0,
+      duration: '200%'
+    })
+    .setPin('#map3_Scene_c .pin-wrapper')
+
+    .addTo(controller);
+
+
+
+
+  var pinScene04c = new ScrollMagic.Scene({
+      triggerElement: '#map3_Scene_c',
+      triggerHook: 0,
+      duration: '200%'
+    })
+    .setPin('#map4_Scene_a .pin-wrapper')
+
+    .addTo(controller);
+
+
+  var pinScene05a = new ScrollMagic.Scene({
+      triggerElement: '#map4_Scene_a',
+      triggerHook: 0,
+      duration: '200%'
+    })
+    .setPin('#map4_Scene_b .pin-wrapper')
+
+    .addTo(controller);
+
+
+  var pinScene05b = new ScrollMagic.Scene({
+      triggerElement: '#map4_Scene_b',
+      triggerHook: 0,
+      duration: '200%'
+    })
+    .setPin('#map4_Scene_c .pin-wrapper')
+
+    .addTo(controller);
+
+
+  var pinScene05c = new ScrollMagic.Scene({
+      triggerElement: '#map4_Scene_c',
+      triggerHook: 0,
+      duration: '200%'
+    })
+    .setPin('#map5_Scene_a .pin-wrapper')
+
+    .addTo(controller);
+
+
+  var pinScene06a = new ScrollMagic.Scene({
+      triggerElement: '#map5_Scene_a',
+      triggerHook: 0,
+      duration: '200%'
+    })
+    .setPin('#map5_Scene_b .pin-wrapper')
+
+    .addTo(controller);
+
+  var pinScene06b = new ScrollMagic.Scene({
+      triggerElement: '#map5_Scene_b',
+      triggerHook: 0,
+      duration: '100%'
+    })
+    .setPin('#map5_Scene_c .pin-wrapper')
+
+    .addTo(controller);
+
+
+
+  var pinQuotes = new ScrollMagic.Scene({
+      triggerElement: '#quotes_Scene',
+      triggerHook: 1,
+      duration: '100%'
+    })
+    .setPin('#quotes_Scene .pin-wrapper', { pushFollowers: false })
+
+    .addTo(controller);
+
+  var pinLaunch = new ScrollMagic.Scene({
+      triggerElement: '#launch_Scene',
+      triggerHook: 1,
+      duration: '100%'
+    })
+    .setPin('#launch_Scene .pin-wrapper', { pushFollowers: false })
+
+    .addTo(controller);
+
+
+
+
+
+  $('.site-header nav').click(function() { $('.site-header nav').toggleClass('open'); });
+  var scene = new ScrollMagic.Scene({ triggerElement: ".subhead-module" }).on('enter', function() {
+    console.log('trigger is on');
+    $('.strib-logo.white').css({ opacity: 0, transition: '1s opacity', });
+    $('li.label').css({ color: '#333', transition: '1s color', });
+    $('li.link').css({ display: 'block', });
+    $('nav.story-nav').css({ background: 'rgba(255, 255, 255, 1)', borderBottom: '1px solid #DADADA', transition: '1s all', });
+    $('.strib-logo.color').css({ opacity: 1, transition: '1s opacity', });
+    $('ul.dropdown.label').css({ background: 'rgba(255, 255, 255, 1)', transition: '1s all', });
+    $('span.caret').css({ opacity: 1, transition: '1s opacity', });
+  }).on('leave', function() {
+    console.log('trigger is off');
+    if ($("body.story-510760212")[0]) { $('nav.story-nav').css({ background: 'linear-gradient(to bottom, rgba(142,156,174,0.55) 0%, rgba(142,156,174,0.35) 60%, rgba(142,156,174,0) 100%)', borderBottom: '0px solid transparent', transition: '1s all', }); } else { $('nav.story-nav').css({ background: 'rgba(255, 255, 255, 0)', borderBottom: '0px solid transparent', transition: '1s all', }); } $('.strib-logo.white').css({ opacity: 1, transition: '1s opacity', });
+    $('li.label').css({ color: 'white', transition: '1s color', });
+    $('li.link').css({ display: 'block', });
+    $('.strib-logo.color').css({ opacity: 0, transition: '1s opacity', });
+    $('ul.dropdown.label').css({ background: 'rgba(255, 255, 255, 0)', transition: '1s all', });
+    $('span.caret').css({ opacity: 0, transition: '1s opacity', });
+  }).addTo(controller);
+  var triggerHook = scene.triggerHook(0.01);
+});
+
+</script>

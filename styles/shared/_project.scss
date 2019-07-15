@@ -286,7 +286,7 @@ p.summary {
 
 .subhead-module {
   margin-top: 20px;
-  margin-bottom: 75px;
+  margin-bottom: 55px;
 
 
   @media only screen and (max-width: 767px) {
@@ -296,11 +296,13 @@ p.summary {
 
   .pub-date {
     font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-    display: inline-block;
+    display: block;
     text-transform: uppercase;
     color: #959595;
     font-size: .85em;
     font-weight: bold;
+    margin-top:.8em;
+    letter-spacing:.5px;
   }
 
   h1 {
@@ -311,8 +313,9 @@ p.summary {
     padding: 0;
     width: 100%;
     max-width: 970px;
-    margin: .7em auto 0.3em auto;
-    line-height: 0.9em;
+    margin: .7em auto 0 auto;
+    line-height: 100%;
+    letter-spacing:-.85px;
 
     @media only screen and (max-width: 767px) {
       font-size: 3em;
