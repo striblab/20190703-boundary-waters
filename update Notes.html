@@ -1,13 +1,40 @@
-change /bwca redirect to current article.
+change /bwca redirect to current article. http://www.startribune.com/x/510080592/
 
-Update Nav for newest part
+day 1 - working example
+http://www.startribune.com/father-son-launch-epic-boundary-waters-canoe-journey/510080482/
+day1 sidebar
+http://www.startribune.com/a-trail-of-the-voyageurs-sure-but-of-so-many-more/512742652/
+
+day 2 - stuff you will need to update
+http://www.startribune.com/netheader-goes-here/510080592/?preview=1
+day 2 sidebar
+http://www.startribune.com/netheader-goes-here/512743502/?preview=1
+
+LCD: 510082251
+
+I have a folder inside of 20190703-boundary-waters called Boundary-Water-parts 
+• rawDay2.html file that has rough copy and strib tags for day 2
+• BW TopLCD.html - see below
+
+run gulp inside 20190703-boundary-waters
+
+
+Update Nav for part 2 whenever story and sidebar are through slot.
 
 	1. Open  _nav.scss and search for BILLY STEVE	
+	2 spots to change: lines 289 and 308
+	will then need to be put into S3 with:  gulp publish --production
 
 
 	2. open BW TopLCD.html and search for BILLY STEVE
+	line 57
+	will then need to be put into LCD 510082251. - Top Nav
 
-sidebar
+
+
+sidebar tips
 
 sidebars need to be wrapped in <div class="sidebar storyBlock">
-	make sure sidebar has associated image
+and <p class="drop-caps Text_Body"> needs to be dropped in for first paragraph.
+
+make sure sidebar has associated image and caption
