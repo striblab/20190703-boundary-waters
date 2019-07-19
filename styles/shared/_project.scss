@@ -84,9 +84,6 @@ ul.article-tools {
 }
 
 
-
-
-
 div.series-about {
   width: 200px;
   float: right;
@@ -269,7 +266,7 @@ span.drop-cap {
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 30px;
-  color: #E74C3C;
+  color: #000;
   margin-bottom: 10px;
 }
 
@@ -301,8 +298,8 @@ p.summary {
     color: #959595;
     font-size: .85em;
     font-weight: bold;
-    margin-top:.8em;
-    letter-spacing:.5px;
+    margin-top: .8em;
+    letter-spacing: .5px;
   }
 
   h1 {
@@ -315,7 +312,7 @@ p.summary {
     max-width: 970px;
     margin: .7em auto 0 auto;
     line-height: 100%;
-    letter-spacing:-.85px;
+    letter-spacing: -.85px;
 
     @media only screen and (max-width: 767px) {
       font-size: 3em;
@@ -326,6 +323,12 @@ p.summary {
 
 .l-article-topper.wide {
   display: none;
+}
+
+.sidebar {
+  .l-article-topper.wide {
+    display: block;
+  }
 }
 
 h1.article-title {
@@ -348,10 +351,18 @@ p.byline.milli#byline {
   }
 }
 
+.content {
+  padding: 0;
+}
+
 .content.article {
   p {
     margin: 0 auto;
     margin-bottom: 16px;
+
+    @media only screen and (max-width: 640px) {
+      padding: 0 10%;
+    }
   }
 }
 
@@ -528,8 +539,6 @@ div.button-set {
 
   .drop-caps::first-letter {
     font-family: "Whitman Display", Georgia, Times, serif;
-    ;
-
     font-size: 6em;
     float: left;
     line-height: 0.8em;
@@ -539,6 +548,11 @@ div.button-set {
 
   .size-xl {
     margin: 4em 0 2em -83px;
+
+    &.day1-fish,
+    &.day2-contusion {
+      margin-top: -1em;
+    }
 
     .related-byline {
       display: none;
@@ -689,12 +703,12 @@ div.button-set {
     }
 
     h4 {
-      line-height: 1.4em;
-      font-size: .9em;
+      line-height: 1.9em;
+      font-size: 1em;
     }
 
     float: right;
-    width: 155px;
+    width: 175px;
     margin-right: 2.5em;
     margin-top: -.7em;
     margin-bottom: 2em;
@@ -704,6 +718,16 @@ div.button-set {
       border-top: 1px solid #333;
       margin-top: 0.7em;
       padding-top: 0.7em;
+    }
+
+    .mapReefer {
+      font-size: 14px;
+      margin-top: 15px;
+
+      h4 {
+        font-size: 16px;
+        margin-top:.5em;
+      }
     }
 
     .galleryReefer {
@@ -769,4 +793,23 @@ div.button-set {
   background-color: transparent;
   border: none;
   box-shadow: none;
+}
+
+// NEWSLETTER
+.inline-newsletter.related-media {
+  width: 250px;
+  float: right;
+  margin: 0.5em -5em 0.5em 0;
+  font-size: .9em;
+}
+
+.storyBlock.day2 .inline-newsletter.related-media {
+  margin-top: -13em;
+}
+
+// GALLERY
+.article-featured-gallery-mod p {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+  margin-top: 6px;
+  font-size: 14px;
 }

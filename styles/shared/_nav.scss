@@ -1,8 +1,4 @@
-.l-navigation-shortnav-container {
-  margin-top:0;
-  }
-
-  .series-article nav.story-nav {
+.series-article nav.story-nav {
   position: relative;
   min-width: 640px;
   text-align: left
@@ -69,13 +65,17 @@
 }
 
 .series-article nav.story-nav .strib-logo {
-  height: 22px;
+  height: auto;
   position: absolute;
   top: 50%;
   left: 12px;
+  width: 126px;
   z-index: 100;
   -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%)
+  transform: translate(0, -50%);
+  @media only screen and (max-width: 767px) {
+    width: unset;
+  }
 }
 
 .series-article .site-header {
@@ -188,6 +188,7 @@
   background-color: transparent;
   border: none;
   box-shadow: none;
+  margin-top: 0px;
 }
 
 
@@ -227,8 +228,13 @@ li.link {
   display: none;
 }
 
-.drop-zone span.label-part-title {display:none;}
-.drop-zone .projectTitle {display:none;}
+.drop-zone span.label-part-title {
+  display: none;
+}
+
+.drop-zone .projectTitle {
+  display: none;
+}
 
 .package-share .share__facebook .share-icon,
 .package-share .share__twitter .share-icon,
@@ -273,29 +279,38 @@ span.dropcap {
   margin-top: -8px;
 }
 
+
+// FOR BILLY STEVE CLAYTON
+
 .story-510080122 li.label-510080122,
+.story-510080482 li.label-510080482,
+.story-512742652 li.label-510080482,
+//sidebar day 1
 .story-2 li.label-2,
 .story-3 li.label-3,
 .story-4 li.label-4,
 .story-5 li.label-5,
-.story-6 li.label-6,
 .story-510081151 li.label-510081151 {
   //map
   display: block !important;
 }
 
 .story-510080122 li.link-510080122,
+.story-510080482 li.link-510080482,
+.story-512742652 li.link-510080482,
+//sidebar day 1
 .story-2 li.link-2,
 .story-3 li.link-3,
 .story-4 li.link-4,
 .story-5 li.link-5,
-.story-6 li.link-6,
 .story-510081151 li.link-510081151 {
   //map
   display: block !important;
-  color:red;
+  color: darkred;
 }
 
+// SIDEBARS
+// 512742652,512743502,512743082,512743202,512743412
 
 // // Shows that days story label
 // .story-510080122 li.label-510080122,
@@ -387,11 +402,10 @@ nav.story-nav {
 
 }
 
-// uniques situation for part 3, js addresses this as well
-body.story-510760212 nav.story-nav {
-  background: linear-gradient(to bottom, rgba(142, 156, 174, 0.55) 0%, rgba(142, 156, 174, 0.35) 60%, rgba(142, 156, 174, 0) 100%);
-
-}
+// uniques situation for gradiation behind top nav, js addresses this as well
+// body.story-510760212 nav.story-nav {
+//   background: linear-gradient(to bottom, rgba(142, 156, 174, 0.55) 0%, rgba(142, 156, 174, 0.35) 60%, rgba(142, 156, 174, 0) 100%);
+// }
 
 .strib-logo.white {
   opacity: 1;
@@ -479,3 +493,93 @@ span.dropcap {
   font-weight: 400;
   margin-top: -8px;
 }
+// TRIGGERON
+nav.story-nav.triggerOn {
+  background: rgba(255, 255, 255, 1);
+  border-bottom: 1px solid #DADADA;
+  transition: 1s all;
+
+  .strib-logo.white {
+    opacity: 0;
+    transition: 1s opacity;
+  }
+
+  .no-side-share .share__comments .share-icon {
+    background-color: #d3d3d3;
+    transition: 1s all;
+  }
+
+  li.label {
+    color: #333333;
+    transition: 1s color;
+  }
+
+  li.link {
+    display: block;
+  }
+
+
+  .strib-logo.color {
+    opacity: 1;
+    transition: 1s opacity;
+  }
+
+  ul.dropdown.label {
+    background: rgba(255, 255, 255, 1);
+    transition: 1s all
+  }
+
+  span.caret {
+    opacity: 1;
+    transition: 1s opacity
+  }
+}
+// TRIGGEROFF
+nav.story-nav.triggerOff {
+  background: rgba(255, 255, 255, 0);
+  border-bottom: 0px solid transparent;
+  transition: 1s all;
+
+  .strib-logo.white {
+    opacity: 1;
+    transition: 1s opacity;
+  }
+
+  .no-side-share .share__comments .share-icon {
+    background-color: transparent;
+    transition: 1s all;
+  }
+
+  li.label {
+    color: #ffffff;
+    transition: 1s color;
+  }
+
+  li.link {
+    display: block;
+  }
+
+
+  .strib-logo.color {
+    opacity: 0;
+    transition: 1s opacity;
+  }
+
+  ul.dropdown.label {
+    background: rgba(255, 255, 255, 0);
+    transition: 1s all
+  }
+
+  span.caret {
+    opacity: 0;
+    transition: 1s opacity
+  }
+}
+// $('nav.story-nav').css({ background: 'rgba(255, 255, 255, 0)', borderBottom: '0px solid transparent', transition: '1s all', }); }
+//     $('.strib-logo.white').css({ opacity: 1, transition: '1s opacity', });
+//     $('.no-side-share .share__comments .share-icon').css({ backgroundColor: 'transparent', transition: '1s all', });
+//     $('li.label').css({ color: 'white', transition: '1s color', });
+//     $('li.link').css({ display: 'block', });
+//     $('.strib-logo.color').css({ opacity: 0, transition: '1s opacity', });
+//     $('ul.dropdown.label').css({ background: 'rgba(255, 255, 255, 0)', transition: '1s all', });
+//     $('span.caret').css({ opacity: 0, transition: '1s opacity', });

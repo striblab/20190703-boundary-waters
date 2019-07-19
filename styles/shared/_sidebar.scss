@@ -1,0 +1,47 @@
+.story-512742652,
+.story-512743502,
+.story-512743082,
+.story-512743202,
+.story-512743412 {
+  &.series-article .article-featured-media-wrapper {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  &.series-article .article-headline {
+    max-width: 800px;
+    margin-bottom: .45em;
+  }
+
+  &.series-article .l-article-body .article-body {
+    width: 100%;
+    max-width: 645px;
+  }
+
+  &.series-article .article-subhead {
+    display: none;
+  }
+
+  .l-article-topper.wide {
+    margin-top: 150px;
+    display: block;
+  }
+
+  .sidebar {
+    max-width: 645px;
+    margin-top: 2em;
+  }
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    p.byline.milli#byline {
+      display: block;
+    }
+
+    h1.article-title {
+      display: block;
+      margin-top: 120px;
+    }
+  }
+
+}

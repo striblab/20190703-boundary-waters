@@ -1,0 +1,29 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<script>
+    document.domain = "startribune.com";
+    document.addEventListener( 'DOMContentLoaded', function(event) {
+      var parentID = window.frameElement;
+      var el = document.getElementById("email-form");
+      el.className += parentID.id;
+      document.getElementById("formReturn").href = "story-form.html?" + parentID.id;
+    });
+  </script>
+<title>Star Tribune email sign up</title>
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body id="email-form" class="story-thanks ">
+<div class="email email-link">
+<h1>Thanks. Keep an eye on your email for updates.</h1>
+<p><a id="formReturn" href="story-form.html">Register another email address</a></p>
+</div>
+</body>
+</html>

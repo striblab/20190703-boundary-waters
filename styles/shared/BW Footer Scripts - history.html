@@ -12,74 +12,57 @@ $(document).ready(function() {
 
   var titleScene = new ScrollMagic.Scene({ triggerElement: '#title_Scene', triggerHook: .9, duration: 0 })
     .addTo(controller);
-
   var videoScene = new ScrollMagic.Scene({ triggerElement: '#video_Scene', triggerHook: 0, duration: '100%' })
     .setPin('#map0_Scene .pin-wrapper')
     .addTo(controller);
-
   var pinScene00 = new ScrollMagic.Scene({ triggerElement: '#map0_Scene', triggerHook: 0, duration: '100%' })
     .setPin('#map0_Scene .pin-wrapper')
     .addTo(controller);
-
   var pinScene01 = new ScrollMagic.Scene({ triggerElement: '#map0_Scene', triggerHook: 0, duration: '200%' })
-    .setPin('#map1_Scene_a .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map1_Scene_a .pin-wrapper')
+  .addTo(controller);
   var pinScene02a = new ScrollMagic.Scene({ triggerElement: '#map1_Scene_a', triggerHook: 0, duration: '200%' })
-    .setPin('#map1_Scene_b .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map1_Scene_b .pin-wrapper')
+  .addTo(controller);
   var pinScene02b = new ScrollMagic.Scene({ triggerElement: '#map1_Scene_b', triggerHook: 0, duration: '200%' })
-    .setPin('#map2_Scene_a .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map2_Scene_a .pin-wrapper')
+  .addTo(controller);
   var pinScene03a = new ScrollMagic.Scene({ triggerElement: '#map2_Scene_a', triggerHook: 0, duration: '200%' })
-    .setPin('#map2_Scene_b .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map2_Scene_b .pin-wrapper')
+  .addTo(controller);
   var pinScene03b = new ScrollMagic.Scene({ triggerElement: '#map2_Scene_b', triggerHook: 0, duration: '200%' })
-    .setPin('#map3_Scene_a .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map3_Scene_a .pin-wrapper')
+  .addTo(controller);
   var pinScene04a = new ScrollMagic.Scene({ triggerElement: '#map3_Scene_a', triggerHook: 0, duration: '200%' })
-    .setPin('#map3_Scene_b .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map3_Scene_b .pin-wrapper')
+  .addTo(controller);
   var pinScene04b = new ScrollMagic.Scene({ triggerElement: '#map3_Scene_b', triggerHook: 0, duration: '200%' })
-    .setPin('#map3_Scene_c .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map3_Scene_c .pin-wrapper')
+  .addTo(controller);
   var pinScene04c = new ScrollMagic.Scene({ triggerElement: '#map3_Scene_c', triggerHook: 0, duration: '200%' })
-    .setPin('#map4_Scene_a .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map4_Scene_a .pin-wrapper')
+  .addTo(controller);
   var pinScene05a = new ScrollMagic.Scene({ triggerElement: '#map4_Scene_a', triggerHook: 0, duration: '200%' })
-    .setPin('#map4_Scene_b .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map4_Scene_b .pin-wrapper')
+  .addTo(controller);
   var pinScene05b = new ScrollMagic.Scene({ triggerElement: '#map4_Scene_b', triggerHook: 0, duration: '200%' })
-    .setPin('#map4_Scene_c .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map4_Scene_c .pin-wrapper')
+  .addTo(controller);
   var pinScene05c = new ScrollMagic.Scene({ triggerElement: '#map4_Scene_c', triggerHook: 0, duration: '200%' })
-    .setPin('#map5_Scene_a .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map5_Scene_a .pin-wrapper')
+  .addTo(controller);
   var pinScene06a = new ScrollMagic.Scene({ triggerElement: '#map5_Scene_a', triggerHook: 0, duration: '200%' })
-    .setPin('#map5_Scene_b .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map5_Scene_b .pin-wrapper')
+  .addTo(controller);
   var pinScene06b = new ScrollMagic.Scene({ triggerElement: '#map5_Scene_b', triggerHook: 0, duration: '100%' })
-    .setPin('#map5_Scene_c .pin-wrapper')
-    .addTo(controller);
-
+  .setPin('#map5_Scene_c .pin-wrapper')
+  .addTo(controller);
   var pinQuotes = new ScrollMagic.Scene({ triggerElement: '#quotes_Scene', triggerHook: 1, duration: '100%' })
-    .setPin('#quotes_Scene .pin-wrapper', { pushFollowers: false })
-    .addTo(controller);
-    
+  .setPin('#quotes_Scene .pin-wrapper', { pushFollowers: false })
+  .addTo(controller);
   var pinLaunch = new ScrollMagic.Scene({ triggerElement: '#launch_Scene', triggerHook: 1, duration: '100%' })
-    .setPin('#launch_Scene .pin-wrapper', { pushFollowers: false })
-    .addTo(controller);
+  .setPin('#launch_Scene .pin-wrapper', { pushFollowers: false })
+  .addTo(controller);
 
   $('.site-header nav').click(function() { $('.site-header nav').toggleClass('open'); });
   var scene = new ScrollMagic.Scene({ triggerElement: ".subhead-module" }).on('enter', function() {

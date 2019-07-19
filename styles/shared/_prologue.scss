@@ -12,12 +12,19 @@
 
     .wrapper {
       position: absolute;
-      width: 250px;
+      width: 650px;
       top: 50%;
-      left: 10%;
+      left: 50%;
       max-width: 100%;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+
+      &.mapFront {
+        width: 250px;
+        left: 10%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
     }
   }
 
@@ -100,13 +107,12 @@
       width: 100%;
       max-width: 465px;
       color: #fff;
-
-      margin: .7em auto 0 auto;
+      margin: 0 auto .7em auto;
       line-height: 100%;
       letter-spacing: -.85px;
 
       @media (max-width: 767px) {
-        font-size: 2.7em;
+        font-size: 2.5em;
         letter-spacing: .5px;
       }
     }
@@ -121,13 +127,15 @@
       margin-bottom: 2em;
       letter-spacing: 0;
       color: #ccc;
+      line-height: 170%;
 
       @media (max-width: 767px) {
         font-size: .8em;
       }
 
       a {
-        color: #fff;
+        color: #ccc;
+        font-weight: normal;
       }
     }
 
@@ -185,7 +193,7 @@
     background-color: rgba(0, 0, 0, .9);
 
     .myWrapper {
-      position: relative;
+      position: absolute;
       height: 450px;
       z-index: 5;
       opacity: 0;
@@ -244,25 +252,39 @@
   .referenceMap {}
 
   .layer {
-    background-position: center right;
-    background-size: auto;
+    background-position: top center;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     max-width: 970px;
     height: 750px;
-    margin: 40px auto -40px auto;
+    margin: 0 auto 0 auto;
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 50px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: .5;
+    transform: translate(-50%, 0);
+
+    // opacity: .5;
+    &.mapFront {
+      background-position: center right;
+      background-size: auto;
+      background-repeat: no-repeat;
+      width: 100%;
+      max-width: 970px;
+      height: 750px;
+      // margin: 40px auto -40px auto;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
 
     @media (max-width: 767px) {
       height: 100%;
-      background-position: center;
-      background-size: contain;
-      opacity: .3;
+      opacity: .5;
     }
   }
 
@@ -272,7 +294,8 @@
   #map4_Scene_a,
   #map4_Scene_b,
   #map4_Scene_c {
-    background-color: #ebebec;
+    // background-color: #ebebec;
+    background-color: #ffffff;
   }
 
 
@@ -284,7 +307,8 @@
   #map5_Scene_a,
   #map5_Scene_b,
   #map5_Scene_c {
-    background-color: #d7d7d7;
+    // background-color: #d7d7d7;
+    background-color: #ebebeb;
   }
 
   .slide {
@@ -313,6 +337,22 @@
 
   .slide .wrapper {
     position: absolute;
+    background-color: #ffffff;
+    padding: 15px;
+
+
+    @media (max-width: 767px) {
+      width: 90% !important;
+      background-color: #ffffff;
+      padding: 15px;
+      left: 50%;
+      -webkit-transform-style: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  .slide .wrapper.mapFront {
+    position: absolute;
 
     @media (max-width: 998px) {
       left: 2%;
@@ -331,9 +371,9 @@
   }
 
   .slide .wrapper h2 {
-    font-family: "Whitman Display";
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
     letter-spacing: -.85px;
-    font-size: 2em;
+    font-size: 1.4em;
     margin: 0 0 .7em 0;
   }
 
@@ -353,7 +393,7 @@
 
   @media (max-width: 767px) {
     .slide .wrapper h2 {
-      font-size: 2em;
+      font-size: 1.5em;
     }
 
     .slide .wrapper h3 {
@@ -364,6 +404,7 @@
     .slide .wrapper h4 {
       font-size: .9em;
       padding-bottom: 0;
+      margin-bottom: 1em;
     }
   }
 
@@ -407,19 +448,19 @@
   /*MAP 1*/
   #map1_Scene_a .layer-1 {
     /* margin-top: 330px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map1.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map1_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map1_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map1_fm.png");
     }
   }
 
   #map1_Scene_b .layer-1 {
     /* margin-top: 330px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map1.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map1_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map1_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map1_fm.png");
     }
   }
 
@@ -430,19 +471,19 @@
   /*MAP 2*/
   #map2_Scene_a .layer-2 {
     /* margin-top: 270px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map2.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map2_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map2_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map2_fm.png");
     }
   }
 
   #map2_Scene_b .layer-2 {
     /* margin-top: 270px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map2.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map2_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map2_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map2_fm.png");
     }
   }
 
@@ -453,28 +494,28 @@
   /*MAP 3*/
   #map3_Scene_a .layer-3 {
     /* margin-top: 190px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map3.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map3_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map3_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map3_fm.png");
     }
   }
 
   #map3_Scene_b .layer-3 {
     /* margin-top: 190px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map3.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map3_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map3_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map3_fm.png");
     }
   }
 
   #map3_Scene_c .layer-3 {
     /* margin-top: 190px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map3.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map3_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map3_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map3_fm.png");
     }
   }
 
@@ -485,28 +526,28 @@
   /*MAP 4*/
   #map4_Scene_a .layer-4 {
     /* margin-top: 110px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map4.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map4_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map4_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map4_f,.png");
     }
   }
 
   #map4_Scene_b .layer-4 {
     /* margin-top: 110px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map4.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map4_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map4_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map4_fm.png");
     }
   }
 
   #map4_Scene_c .layer-4 {
     /* margin-top: 110px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map4.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map4_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map4_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map4_fm.png");
     }
   }
 
@@ -517,28 +558,28 @@
   /*MAP 5*/
   #map5_Scene_a .layer-5 {
     /* margin-top: 90px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map5.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map5_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map5_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map5_fm.png");
     }
   }
 
   #map5_Scene_b .layer-5 {
     /* margin-top: 90px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map5.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map5_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map5_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map5_fm.png");
     }
   }
 
   #map5_Scene_c .layer-5 {
     /* margin-top: 90px;*/
-    background-image: url("http://stmedia.startribune.com/images/bwca_map5.png");
+    background-image: url("http://stmedia.startribune.com/images/bwca_map5_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map5_mobile_b.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map5_fm.png");
     }
   }
 
@@ -592,7 +633,8 @@
     font-weight: normal;
 
     @media (max-width: 767px) {
-      font-size: 1.3em;
+      font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+      font-size: 1.2em;
       line-height: 135%;
       margin-bottom: .5em;
     }
@@ -605,6 +647,7 @@
     font-weight: normal;
 
     @media (max-width: 767px) {
+      font-family: "Benton Sans", Helvetica, Arial, sans-serif;
       font-size: .8em;
       margin-top: .75em;
     }
@@ -657,10 +700,12 @@
   }
 
   #launch_Scene .wrapper {
-    width: 80% !important;
+    width: 80%;
     color: #ffffff;
+    background-color: transparent;
+    padding: 0;
     text-align: center;
-    top: 25% !important;
+    top: 25%;
     right: unset;
     left: 50%;
     margin: 0 auto;
@@ -668,14 +713,25 @@
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 
+    @media (max-width: 767px) {
+      background-color: transparent;
+      padding: 0;
+      top: 10%;
+    }
+
     @media (max-width: 998px) {
       background-color: transparent;
       padding: 0;
     }
   }
 
+  #launch_Scene .newsletter-signup {
+    float: none;
+    margin-right: auto;
+  }
+
   #launch_Scene .wrapper .nav-logo {
-    display: block;
+    display: none;
     margin: 0 auto 1.5em auto;
     background-image: url(http://www.startribune.com/static/img/branding/logos/reverse-startribune-logo-white.png);
     background-image: url(http://www.startribune.com/static/img/branding/logos/reverse-startribune-logo-white.svg);
@@ -704,7 +760,7 @@
 
   @media (max-width: 767px) {
     #launch_Scene .wrapper h1 {
-      font-size: 2.5em;
+      font-size: 2em;
       line-height: 100%;
     }
   }
@@ -777,13 +833,14 @@
     width: 300px;
     // display: none;
     float: none;
-   margin: 4em auto 0 auto;
+    margin: 4em auto 0 auto;
 
     @media (max-width: 767px) {
-      display: none;
+      width: 250px;
+      margin-top: 1em;
     }
 
-    header h2{
+    header h2 {
       display: none;
     }
   }

@@ -2,29 +2,36 @@
 
 Five part series about a trip to the boundary waters for outdoors
 
-map: 510081151
 
-day1: 510080122
+
+day0 Prologue/map: 510080122
+
+day1: 510080482
+gallery: 512836601
 sidebar: 512742652
 
-day2: 510080482
+day2: 510080592
+gallery: 512836681
 sidebar: 512743502
 
-day3: 510080592
+day3: 510080662
+gallery: 512836691
 sidebar: 512743082
 
-day4: 510080662
+day4: 510080742
+gallery: 512836711
 sidebar: 512743202
 
-day5: 510080742
+day5: 510080822
+gallery: 512836761
 sidebar: 512743412
 
+512742652,512743502,512743082,512743202,512743412
 
-
-emergency: 510080822
-
+emergency:510081151
 
 LCD: 510082251
+
 
 ## Data
 
