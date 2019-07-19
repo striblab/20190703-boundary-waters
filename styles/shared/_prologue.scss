@@ -261,7 +261,7 @@
     margin: 0 auto 0 auto;
     text-align: center;
     position: absolute;
-    top: 50px;
+    top: 120px;
     left: 50%;
     transform: translate(-50%, 0);
 
@@ -284,7 +284,7 @@
 
     @media (max-width: 767px) {
       height: 100%;
-      opacity: .5;
+      opacity: 1;
     }
   }
 
@@ -529,7 +529,7 @@
     background-image: url("http://stmedia.startribune.com/images/bwca_map4_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map4_f,.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map4_f.png");
     }
   }
 
