@@ -1,4 +1,7 @@
 .story-510080122 {
+  .content-area ul.article-tools {
+    display: none;
+  }
 
   .l-article-body .article-body {
     width: 100% !important;
@@ -529,7 +532,7 @@
     background-image: url("http://stmedia.startribune.com/images/bwca_map4_f.png");
 
     @media (max-width: 767px) {
-      background-image: url("http://stmedia.startribune.com/images/bwca_map4_f.png");
+      background-image: url("http://stmedia.startribune.com/images/bwca_map4_fm.png");
     }
   }
 

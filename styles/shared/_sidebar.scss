@@ -44,4 +44,16 @@
     }
   }
 
+  .recipe {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 2em;
+    margin:3em 0 1em 0;
+    // font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    h4 {
+      text-transform:uppercase;
+      font-size: 1.5em;
+      margin-bottom:1em;
+    }
+  }
 }

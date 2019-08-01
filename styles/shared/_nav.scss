@@ -1,3 +1,7 @@
+.content-area ul.article-tools {
+  display: none;
+}
+
 .series-article nav.story-nav {
   position: relative;
   min-width: 640px;
@@ -73,6 +77,7 @@
   z-index: 100;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
+
   @media only screen and (max-width: 767px) {
     width: unset;
   }
@@ -239,14 +244,22 @@ li.link {
 .package-share .share__facebook .share-icon,
 .package-share .share__twitter .share-icon,
 .package-share .share__comments .share-icon,
+.package-share .share__email .share-icon,
 .wide-body .share__facebook .share-icon,
 .wide-body .share__twitter .share-icon,
 .wide-body .share__comments .share-icon,
+.wide-body .share__email .share-icon,
 .no-side-share .share__facebook .share-icon,
 .no-side-share .share__twitter .share-icon,
-.no-side-share .share__comments .share-icon {
-  width: 35px;
-  height: 35px;
+.no-side-share .share__comments .share-icon,
+.no-side-share .share__email .share-icon {
+  width: 30px;
+  height: 30px;
+
+  @media only screen and (max-width: 767px) {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 
@@ -279,17 +292,24 @@ span.dropcap {
   margin-top: -8px;
 }
 
-
 // FOR BILLY STEVE CLAYTON
 
 .story-510080122 li.label-510080122,
+// day1
 .story-510080482 li.label-510080482,
 .story-512742652 li.label-510080482,
-
-// BILLY - UNCOMMENT 2 lines below
-// .story-510080592 li.label-510080592,
-// .story-512743502 li.label-510080592,
-
+// day2
+.story-510080592 li.label-510080592,
+.story-512743502 li.label-510080592,
+// day3
+.story-510080662 li.label-510080662,
+.story-512743082 li.label-510080662,
+// day4
+.story-510080742 li.label-510080742,
+.story-512743202 li.label-510080742,
+// day5
+.story-510080822 li.label-510080822,
+.story-512743412 li.label-510080822,
 
 .story-2 li.label-2,
 .story-3 li.label-3,
@@ -301,14 +321,22 @@ span.dropcap {
 }
 
 .story-510080122 li.link-510080122,
+// day1
 .story-510080482 li.link-510080482,
 .story-512742652 li.link-510080482,
 
-
-// BILLY - UNCOMMENT 2 lines below
-// .story-510080592 li.link-510080592,
-// .story-512743502 li.link-510080592,
-
+// day2
+.story-510080592 li.link-510080592,
+.story-512743502 li.link-510080592,
+// day3
+.story-510080662 li.link-510080662,
+.story-512743082 li.link-510080662,
+// day4
+.story-510080742 li.link-510080742,
+.story-512743202 li.link-510080742,
+// day5
+.story-510080822 li.link-510080822,
+.story-512743412 li.link-510080822,
 
 .story-2 li.link-2,
 .story-3 li.link-3,
@@ -379,8 +407,9 @@ span.dropcap {
   }
 
   ul.article-tools {
-    display: none;
+    display: block;
   }
+
 
   // li.label {
   //     color: #333 !important;
@@ -475,9 +504,11 @@ li.link {
   top: 50%;
   transform: translate(0, -50%);
 
-  @media only screen and (max-width: 640px) {
-    top: 0;
+  @media only screen and (max-width: 767px) {
+    top: 8px;
     transform: translate(0, 0);
+
+
   }
 }
 
@@ -504,6 +535,7 @@ span.dropcap {
   font-weight: 400;
   margin-top: -8px;
 }
+
 // TRIGGERON
 nav.story-nav.triggerOn {
   background: rgba(255, 255, 255, 1);
@@ -545,6 +577,7 @@ nav.story-nav.triggerOn {
     transition: 1s opacity
   }
 }
+
 // TRIGGEROFF
 nav.story-nav.triggerOff {
   background: rgba(255, 255, 255, 0);
@@ -578,14 +611,15 @@ nav.story-nav.triggerOff {
 
   ul.dropdown.label {
     background: rgba(255, 255, 255, 0);
-    transition: 1s all
+    transition: 1s all;
   }
 
   span.caret {
     opacity: 0;
-    transition: 1s opacity
+    transition: 1s opacity;
   }
 }
+
 // $('nav.story-nav').css({ background: 'rgba(255, 255, 255, 0)', borderBottom: '0px solid transparent', transition: '1s all', }); }
 //     $('.strib-logo.white').css({ opacity: 1, transition: '1s opacity', });
 //     $('.no-side-share .share__comments .share-icon').css({ backgroundColor: 'transparent', transition: '1s all', });
