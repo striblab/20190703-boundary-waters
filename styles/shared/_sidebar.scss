@@ -32,6 +32,10 @@
     margin-top: 2em;
   }
 
+  .quote {
+    margin: 2em 0;
+  }
+
   // MOBILE
   @media only screen and (max-width: 767px) {
     p.byline.milli#byline {
@@ -48,12 +52,13 @@
     width: 100%;
     border: 1px solid #ccc;
     padding: 2em;
-    margin:3em 0 1em 0;
+    margin: 3em 0 1em 0;
+
     // font-family: "Benton Sans", Helvetica, Arial, sans-serif;
     h4 {
-      text-transform:uppercase;
+      text-transform: uppercase;
       font-size: 1.5em;
-      margin-bottom:1em;
+      margin-bottom: 1em;
     }
   }
 }

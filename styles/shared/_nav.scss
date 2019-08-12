@@ -2,6 +2,22 @@
   display: none;
 }
 
+// comment count
+.package-share .share__comments .share-label,
+.wide-body .share__comments .share-label,
+.no-side-share .share__comments .share-label {
+  top: -7px;
+}
+
+.share__comments .share-count {
+  font-size: 9.5px;
+
+}
+
+
+
+
+
 .series-article nav.story-nav {
   position: relative;
   min-width: 640px;
@@ -345,8 +361,44 @@ span.dropcap {
 .story-510081151 li.link-510081151 {
   //map
   display: block !important;
-  color: darkred;
+  color: #000;
+  font-weight:bold;
 }
+
+
+
+// FOR RIGHT NAV
+
+
+// day1
+.story-510080482 li.areefer-510080482,
+
+
+// day2
+.story-510080592 li.areefer-510080592,
+
+// day3
+.story-510080662 li.areefer-510080662,
+
+// day4
+.story-510080742 li.areefer-510080742,
+
+// day5
+.story-510080822 li.areefer-510080822 {
+
+  color: #000;
+  font-weight: bold;
+
+  a {
+    pointer-events: none !important;
+    border-bottom: none !important;
+    color: #000 !important;
+    font-weight: bold !important;
+  }
+}
+
+
+
 
 // SIDEBARS
 // 512742652,512743502,512743082,512743202,512743412
@@ -507,8 +559,7 @@ li.link {
   @media only screen and (max-width: 767px) {
     top: 8px;
     transform: translate(0, 0);
-
-
+    z-index: 2000;
   }
 }
 
