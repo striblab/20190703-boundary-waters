@@ -193,7 +193,8 @@
 
   /*VIDEO SCENE*/
   #video_Scene {
-    background-color: rgba(0, 0, 0, .9);
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 2;
 
     .myWrapper {
       position: absolute;
@@ -252,7 +253,9 @@
     text-align: left;
   }
 
-  .referenceMap {}
+  .referenceMap {
+    display: inline-block;
+  }
 
   .layer {
     background-position: top center;
@@ -282,16 +285,16 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-
     }
 
     @media (max-width: 767px) {
       height: 100%;
       opacity: 1;
+      background-size: contain;
     }
   }
 
-
+// tiger striping between different map views
   #map2_Scene_a,
   #map2_Scene_b,
   #map4_Scene_a,
@@ -431,7 +434,7 @@
 
   /*MAP 0*/
   #map0_Scene {
-    z-index: -10;
+    z-index: 0;
   }
 
   #map0_Scene .layer-0 {
